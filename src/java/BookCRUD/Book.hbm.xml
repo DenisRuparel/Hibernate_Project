@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 3 May, 2023 11:49:08 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="BookCRUD.Book" table="book" catalog="miniproject_db" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="increment" />
+        </id>
+        <property name="bookTitle" type="string">
+            <column name="book_title" length="100" not-null="true" />
+        </property>
+        <property name="catagory" type="string">
+            <column name="catagory" length="100" not-null="true" />
+        </property>
+        <property name="authorName" type="string">
+            <column name="author_name" length="100" not-null="true" />
+        </property>
+        <property name="price" type="int">
+            <column name="price" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

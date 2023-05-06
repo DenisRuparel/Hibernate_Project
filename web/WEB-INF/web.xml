@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>AddBook</servlet-name>
+        <servlet-class>BookCRUD.AddBook</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewBook</servlet-name>
+        <servlet-class>BookCRUD.ViewBook</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewAllBooks</servlet-name>
+        <servlet-class>BookCRUD.ViewAllBooks</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddBook</servlet-name>
+        <url-pattern>/AddBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewBook</servlet-name>
+        <url-pattern>/ViewBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewAllBooks</servlet-name>
+        <url-pattern>/ViewAllBooks</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>
